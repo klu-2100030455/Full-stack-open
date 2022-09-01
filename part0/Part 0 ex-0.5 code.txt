@@ -1,0 +1,17 @@
+title part0 ex0.5
+Actor User
+User->Browser:Goes to vikki page
+Browser->Server:Fetch vikki.html
+note right of Browser:GET request
+Server->Browser:Provide vikki.html
+Browser->Server:Fetch main.css
+note right of Browser:GET request
+Server->Browser:Provide main.css
+Browser->Server:Fetch vikki.js
+note right of Browser:GET request
+Server->Browser:Provide vikki.js
+Browser->User:Render HTML and CSS
+Browser->Server:Fetch data.json
+note right of Browser:AJAX request
+Server->Browser:Provide data.json
+Browser->User:Render notes as HTMLlist
